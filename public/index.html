@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h2 style="text-align: center;"><a href="">Notes App</a></h2>
+    <div class="main">
+        <div class="create">
+            <h4 style="margin-top: 0;">Insert Note</h4>
+            <form action="">
+                <label for="title">Title: </label><br>
+                <input id="title" type="text" placeholder="Enter title" required>
+                <br>
+                <label for="content">Content:</label><br>
+                <input id="content" type="text" placeholder="Enter content" required>
+                <br><br>
+                <input type="button" value="Insert" onclick="createNote()">
+            </form>
+
+            <label for=""></label>
+            <hr>
+            <p id="response"></p>
+        </div>
+        <div class="show">
+            <h4 style="margin-top: 0;">Display Note/s</h4>
+            <select id="dropdown" onchange="handleSelectChange()">
+                <option value="">--Select--</option>
+                <option value="all">Display All</option>
+                <option value="id">Select By Id</option>
+                <option value="date">Select By Date</option>
+            </select>
+            <div id="num"></div>
+            <p id="display"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
